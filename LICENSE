@@ -1,0 +1,79 @@
+mHuBERT-147, Copyright (C) 2024 Naver Corporation
+
+This software is a derivative (see PART 1 and PART 2 below) of the software available here in an unmodified form here:
+https://github.com/facebookresearch/fairseq/
+
+which is being redistributed under the same terms and condistions available here and reproduced below:
+https://github.com/facebookresearch/fairseq/blob/main/LICENSE
+
+MIT License
+
+Copyright (c) Facebook, Inc. and its affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+------------------------------------------------------------------------
+PART 1: THE FOLLOWING SOFTWARE FILES ARE MODIFIED:
+------------------------------------------------------------------------
+
+A) MODIFIED FILE OF ORIGINAL CODEBASE: fairseq/data/audio/hubert_dataset.py
+
+A.1) INCLUDES THE FOLLOWING NEW FUNCTION:
+1. load_audios;
+2. load_labels;
+3. get_language_distribution;
+4. get_dataset_distribution;
+5. get_dataset_indexing;
+6. get_language_indexing;
+7. load_variable_from_numpy;
+8. dump_variable_to_numpy;
+
+A.2) INCLUDES NEW CODE FOR NEW mHubertDataset CLASS DERIVED FROM ORIGINAL FAIRSEQ HubertDataset CLASS:
+(1) new hyper-parameters: (language_upsampling_factor, dataset_upsampling_factor, manifest_numpy_file, label_numpy_file, check_alignment); 
+(2) modified functions: __init___, ordered_indices; get_audio, get_label, __getitem__
+
+A.3) INCLUDES MODIFIED CODE: load_audio
+
+B) MODIFIED FILE OF ORIGINAL CODEBASE: fairseq/tasks/hubert_pretraining.py
+
+B.1) INCLUDES NEW CODE DERIVED FROM ORIGINAL FAIRSEQ CODE: new class mHubertPretrainingConfig based on HubertPretrainingConfig with extra hyper-parameters (language_upsampling_factor, dataset_upsampling_factor, manifest_numpy_file, label_numpy_file, check_alignment)
+
+B.2) INCLUDES NEW CODE DERIVED FROM ORIGINAL FAIRSEQ CODE: new class mHubertPretrainingTask based on HubertPretrainingTask with modified function load_dataset
+
+------------------------------------------------------------------------
+PART 2: THE FOLLOWING SOFTWARE FILES ARE NEW:
+------------------------------------------------------------------------
+
+A) NEW FILE ADDED TO ORIGINAL CODEBASE: 
+examples/hubert/simple_kmeans/dump_km_label_per_language.py
+Notes: based in fairseq code examples/hubert/simple_kmeans/dump_km_label.py
+
+B) NEW FILE ADDED TO ORIGINAL CODEBASE: 
+examples/hubert/simple_kmeans/learn_kmeans_multiple_files.py
+Notes: based in fairseq code examples/hubert/simple_kmeans/learn_kmeans.py
+
+C) NEW FOLDER/FILES ADDED TO ORIGINAL CODEBASE: 
+examples/mHuBERT-147 containing:
+Notes:
+README.md - Explains how to train models
+scripts/ folder - Examples of how to launch the training
+config/ folder - List of hyper-parameters for training
+data_example/ folder - Contains an example of the expected data format
+
+
