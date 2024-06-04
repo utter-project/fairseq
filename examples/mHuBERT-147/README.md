@@ -24,7 +24,7 @@ https://github.com/utter-project/mHuBERT-147-scripts/
 
 ## Trained models and manifest files
 
-Available at: PUT CITATION TO COLLECTION
+Available at: https://huggingface.co/collections/utter-project/mhubert-147-models-665f1c1dea9a5601a1bfc905
 
 ## Citation
 
