@@ -20,3 +20,8 @@ year=2024,
 booktitle={Interspeech 2024},
 }
 ```
+
+## Funding
+
+This is an output of the European Project UTTER (Unified Transcription and Translation for Extended Reality) under grant number 101070631.
+For more information go to https://he-utter.eu/
