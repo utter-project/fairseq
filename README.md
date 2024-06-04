@@ -6,7 +6,7 @@ Find details at: https://github.com/utter-project/fairseq/tree/main/examples/mHu
 
 ## Other resources
 
-* Pre-trained models with manifest files: TO DO COLLECTION
+* Pre-trained models with manifest files: https://huggingface.co/collections/utter-project/mhubert-147-models-665f1c1dea9a5601a1bfc905
 
 * Pre-processing and clustering scripts: https://github.com/utter-project/mHuBERT-147-scripts
 
