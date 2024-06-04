@@ -29,5 +29,10 @@ Available at: PUT CITATION TO COLLECTION
 ## Citation
 
 ```
-TO DO
+@inproceedings{boito2024mhubert,
+author={Marcely Zanon Boito, Vivek Iyer, Nikolaos Lagos, Laurent Besacier, Ioan Calapodescu},
+title={{mHuBERT-147: A Compact Multilingual HuBERT Model}},
+year=2024,
+booktitle={Interspeech 2024},
+}
 ```
