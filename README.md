@@ -27,3 +27,5 @@ booktitle={Interspeech 2024},
 This is an output of the European Project UTTER (Unified Transcription and Translation for Extended Reality) funded by European Union’s Horizon Europe Research and Innovation programme under grant agreement number 101070631.
 
 For more information please visit https://he-utter.eu/
+
+NAVER LABS Europe: https://europe.naverlabs.com/
